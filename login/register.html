@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <meta name="description" content="Form registrasi pengguna baru dengan validasi email dan password">
+    <meta name="author" content="Tugas Akhir Arkan">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Daftar Akun Baru</h2>
+                <p>Buat akun untuk melanjutkan</p>
+            </div>
+            
+            <form class="login-form" id="registerForm" novalidate>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="text" id="username" name="username" required autocomplete="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+    
+                <div class="form-group">
+                    <div class="input-wrapper password-wrapper">
+                        <input type="password" id="password" name="password" required autocomplete="new-password">
+                        <label for="password">Password</label>
+                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                            <span class="eye-icon"></span>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+    
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">Daftar</span>
+                    <span class="btn-loader"></span>
+                </button>
+                
+                <p id="message"></p>
+                    
+            </form>
+    
+            <div class="signup-link">
+                <p>Sudah punya akun? <a href="index.html">Login di sini</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>
