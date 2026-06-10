@@ -20,20 +20,104 @@ https://www.tooplate.com/view/2097-pop
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/tooplate-style.css">                               <!-- Templatemo style -->
 
+    <style>
+        /* Top Auth Bar */
+        .top-auth-bar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            z-index: 1000;
+            border-bottom: 2px solid #6366f1;
+        }
+
+        .top-auth-bar #userInfo {
+            color: white;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .top-auth-bar a.login-btn-top {
+            background: #6366f1;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #6366f1;
+            display: inline-block;
+        }
+
+        .top-auth-bar a.login-btn-top:hover {
+            background: #4f46e5;
+            border-color: #4f46e5;
+            transform: scale(1.05);
+        }
+
+        .top-auth-bar button.logout-btn-top {
+            background: #ef4444;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            border: 2px solid #ef4444;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .top-auth-bar button.logout-btn-top:hover {
+            background: #dc2626;
+            border-color: #dc2626;
+            transform: scale(1.05);
+        }
+
+        /* Adjust main content padding */
+        #tm-wrap {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 600px) {
+            .top-auth-bar {
+                height: auto;
+                flex-direction: column;
+                padding: 10px 15px;
+                gap: 10px;
+            }
+            
+            #tm-wrap {
+                padding-top: 80px;
+            }
+        }
+    </style>
+
     <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),window.getComputedStyle(document.documentElement).getPropertyValue("--tmp-var")}()</script>
     
 </head>
 
 <body>
+    <!-- Top Auth Bar -->
+    <div class="top-auth-bar">
+        <p id="userInfo" style="margin: 0; flex: 1;">Belum login</p>
+        <div>
+            <a href="login/index.html" id="loginLink" class="login-btn-top">Login</a>
+            <button onclick="logout()" class="logout-btn-top" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
     <nav class="nav-main">
         <a href="#welcome">Selamat Datang</a>
         <a href="#team">Tim Kami</a>
         <a href="#work">Karya Kami</a>
         <a href="#contact">Hubungi Kami</a>
-        <p id="userInfo">Belum login</p>
-        <div id="authArea">
-            <button onclick="goLogin()" class="nav-cta">Login</button>
-        </div>
     </nav>
 
     <div id="tm-bg"></div>
@@ -133,9 +217,7 @@ https://www.tooplate.com/view/2097-pop
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="p-sm-4 p-2 tm-img-container">
-                                                            <div class="tm-img-slider" id="tmImgSlider" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Keindahan Ngawi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                                                            </div>
+                                                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Keindahan Ngawi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                         </div>  
                                                     </div>
                                                 </div>
@@ -165,9 +247,7 @@ https://www.tooplate.com/view/2097-pop
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <div class="p-sm-4 p-2" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.409563832087!2d111.44970391408695!3d-7.399319274218624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79f0f0f0f0f0f1%3A0x1f1f1f1f1f1f1f1f!2sNgawi%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1234567890123" width="100%" height="400" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                        </div>
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.409563832087!2d111.44970391408695!3d-7.399319274218624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79f0f0f0f0f0f1%3A0x1f1f1f1f1f1f1f1f!2sNgawi%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1234567890123" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                                         <div style="margin-top: 20px;">
                                                             <h4>Informasi Kontak:</h4>
                                                             <p><strong>Email:</strong> info@ngawi.com</p>
@@ -223,6 +303,26 @@ https://www.tooplate.com/view/2097-pop
             });
 
             $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+        });
+
+        // Auth functions
+        function logout() {
+            localStorage.removeItem("username");
+            location.reload();
+        }
+
+        // Check login status
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("username");
+            const userInfo = document.getElementById("userInfo");
+            const loginLink = document.getElementById("loginLink");
+            const logoutBtn = document.getElementById("logoutBtn");
+
+            if (user && userInfo) {
+                userInfo.innerText = "Halo, " + user;
+                loginLink.style.display = "none";
+                logoutBtn.style.display = "inline-block";
+            }
         });
 
     </script>             
